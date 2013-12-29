@@ -1,7 +1,7 @@
 {
   "name": "data-validate",
   "version": "0.1.0",
-  "description": "Simple boolean data validator.",
+  "description": "Simple data validator designed for schemas.",
   "main": "index.js",
   "dependencies": {
     "validator": "~2.0.0"
@@ -14,16 +14,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tristanz/data-validator.git"
+    "url": "git://github.com/tristanz/data-validate.git"
   },
   "keywords": [
     "validator",
-    "validation"
+    "validation",
+    "validate"
   ],
   "author": "Tristan Zajonc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tristanz/data-validator/issues"
+    "url": "https://github.com/tristanz/data-validate/issues"
   },
-  "homepage": "https://github.com/tristanz/data-validator"
+  "homepage": "https://github.com/tristanz/data-validate"
 }
