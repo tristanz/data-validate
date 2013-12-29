@@ -1,6 +1,6 @@
 {
   "name": "data-validate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Simple data validator designed for schemas.",
   "main": "index.js",
   "dependencies": {
