@@ -1,5 +1,7 @@
 # Data Validate
 
+[![Build Status](https://travis-ci.org/tristanz/data-validate.png?branch=master)](https://travis-ci.org/tristanz/data-validate)
+
 A simple chainable data validation library, based on [validator](https://github.com/chriso/node-validator),
 that returns a boolean validation function.  This calling syntax can be useful
 for libraries that attach validation functions to schemas such as:
