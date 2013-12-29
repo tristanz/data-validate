@@ -1,8 +1,15 @@
 # Data Validate
 
-A simple chainable data validation library, based on `validator`, that returns
-a boolean validation function.  This calling syntax can be useful
-for libraries that attach validation functions to schemas.
+A simple chainable data validation library, based on [validator](https://github.com/chriso/node-validator),
+that returns a boolean validation function.  This calling syntax can be useful
+for libraries that attach validation functions to schemas such as:
+
+```javascript
+var validate = require('data-validate');
+var checks = {
+  "Email address is invalid.": validate.isEmail()
+};
+```
 
 ## Install
 
@@ -15,11 +22,8 @@ npm install data-validate
 
 ```javascript
 var validate = require('data-validate');
-validate.isEmail()('tristan@senseplatform.com');  // true
-
-var checks = {
-	"Email address is invalid.": validate.isEmail()
-};
+validate.isEmail()('test@email.com');  // true
+validate.len(5,20).isAlphanumeric()('a');  // false
 ```
 
 Includes all the validation functions in [validator](https://github.com/chriso/node-validator):
