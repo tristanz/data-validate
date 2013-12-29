@@ -1,0 +1,29 @@
+{
+  "name": "data-validate",
+  "version": "0.1.0",
+  "description": "Simple boolean data validator.",
+  "main": "index.js",
+  "dependencies": {
+    "validator": "~2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.16.2"
+  },
+  "scripts": {
+    "test": "mocha -u tdd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tristanz/data-validator.git"
+  },
+  "keywords": [
+    "validator",
+    "validation"
+  ],
+  "author": "Tristan Zajonc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tristanz/data-validator/issues"
+  },
+  "homepage": "https://github.com/tristanz/data-validator"
+}
