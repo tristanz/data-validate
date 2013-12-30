@@ -1,7 +1,17 @@
+var Validator = require('validator').Validator;
 var check = require('validator').check;
+var url = require('url');
+
+// Use node-validators method of extending.
+Validator.prototype.isDomain = function(domain) {
+  if (url.parse(this.str) !== domain) {
+    this.error(this.msg || this.str + ' is not from domain ' + domain);
+  }
+  return this;
+};
 
 // Get all methods in validator library.
-var methods = Object.keys(check().constructor.prototype);
+var methods = Object.keys(Validator.prototype);
 
 // chainable validation functions.
 function validate(first) {

@@ -16,3 +16,11 @@ test('should return true for valid chain', function(){
 test('should return false for invalid chain', function(){
   assert.equal(false, validate.len(60, 100).isEmail()('test@email.com'));
 });
+
+test('test bad isDomain', function(){
+  assert.equal(false, validate.isDomain('twitter.com')('http://facebook.com/tristanzajonc'));
+});
+
+test('test good isDomain', function(){
+  assert.equal(false, validate.isDomain('twitter.com')('http://twitter.com/tristanzajonc'));
+});

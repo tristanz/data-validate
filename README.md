@@ -28,13 +28,16 @@ validate.isEmail()('test@email.com');  // true
 validate.len(5,20).isAlphanumeric()('a');  // false
 ```
 
-Includes all the validation functions in [validator](https://github.com/chriso/node-validator):
+Includes all the validation functions in [validator](https://github.com/chriso/node-validator), 
+plus a few others:
+
 
 ```
 is()                            //Alias for regex()
 not()                           //Alias for notRegex()
 isEmail()
 isUrl()                         //Accepts http, https, ftp
+isDomain(domain)                //Accepts http, https, ftp with domain 
 isIP()                          //Combines isIPv4 and isIPv6
 isIPv4()
 isIPv6()
