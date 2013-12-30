@@ -17,23 +17,17 @@ function validate(first) {
       return false;
     }
   };
-
-  for (var i = 0; i < methods.length; i++) {
-    (function(method) {
-      f[method] = function() {
-        checks.push({method: method, args: arguments});
-        return f;
-      };
-    }(methods[i]));
-  }
+  methods.forEach(function(method) {
+    f[method] = function() {
+      checks.push({method: method, args: arguments});
+      return f;
+    };
+  });
   return f;
 }
 
-// Top level special case.
-for (var i = 0; i < methods.length; i++) {
-  (function(method) {
-    exports[method] = function() {
-      return validate({method: method, args: arguments});
-    };
-  }(methods[i]));
-}
+methods.forEach(function(method) {
+  exports[method] = function() {
+    return validate({method: method, args: arguments});
+  };  
+});
